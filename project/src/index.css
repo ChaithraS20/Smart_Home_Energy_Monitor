@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #3b82f6, #2dd4bf);
+  padding: 1px;
+}
+
+.gradient-border > div {
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.chart-container {
+  transition: transform 0.2s ease-in-out;
+}
+
+.chart-container:hover {
+  transform: scale(1.01);
+}
